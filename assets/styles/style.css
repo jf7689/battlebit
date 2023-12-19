@@ -21,6 +21,7 @@ img, picture, svg {
 }
 
 body {
+    color: white;
     margin: 0;
     padding: 0;
     background-color: var(--primary-bg-color);
@@ -30,11 +31,14 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* navigation */
 .primary-header {
     background-color: var(--primary-bg-color);
     margin-top: 1rem;
-    outline: 2px solid white;
 }
 
 .nav-wrapper {
@@ -52,6 +56,20 @@ a {
     display: none;
 }
 
+.nav-list {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-list a {
+    color: white;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: var(--primary-btn-color);
+}
+
 .navBuy {
     display: none;
     background-color: var(--primary-btn-color);
@@ -59,19 +77,27 @@ a {
 }
 
 @media (max-width: 1025px) {
-    .primary-nav {
-        display: none;
-    }
-    
-    .primary-nav[data-visible] {
-        display: block;
-        position: fixed;
-    }
-
     .mobile-nav-toggle {
         display: block;
         cursor: pointer;
         background: none;
         border: 0;
+    }
+
+    .primary-nav {
+        display: none;
+        position: absolute;
+        inset: 5rem 0 auto;
+        background-color: gray;
+    }
+    
+    .primary-nav[data-visible] {
+        display: block;
+    }
+
+    .nav-list {
+        display: grid;
+        gap: 1rem;
+        text-align: center;
     }
 }
