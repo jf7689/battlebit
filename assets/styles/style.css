@@ -15,20 +15,63 @@ html {
     box-sizing: border-box;
 }
 
-img, picture, svg, video {
+img, picture, svg {
     display: block;
     max-width: 100%;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg-color);
 }
 
 a {
     text-decoration: none;
 }
 
+/* navigation */
+.primary-header {
+    background-color: var(--primary-bg-color);
+    margin-top: 1rem;
+    outline: 2px solid white;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLogo {
+    width: 150px;
+    height: 50px;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
 .navBuy {
+    display: none;
     background-color: var(--primary-btn-color);
+    border-radius: .5rem;
+}
+
+@media (max-width: 1025px) {
+    .primary-nav {
+        display: none;
+    }
+    
+    .primary-nav[data-visible] {
+        display: block;
+        position: fixed;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+        background: none;
+        border: 0;
+    }
 }
