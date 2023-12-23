@@ -9,6 +9,8 @@
 
 * {
     font: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -22,8 +24,7 @@ img, picture, svg {
 
 body {
     color: white;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: var(--primary-bg-color);
 }
 
@@ -137,13 +138,44 @@ ul {
 }
 
 /* About */
-.container-grid {
+.grid-container {
     display: grid;
 }
 
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem 4rem;
+}
+
+.about-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-btn-bg-color);
+}
+
+.about-context {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+}
+
 @media (min-width:800px) {
-    .container-grid {
+    .grid-container {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width:800px) {
+    .about-img {
+        grid-row: 1 / 2;
+        max-height: 363px;
     }
 }
 
@@ -191,5 +223,25 @@ ul {
     .hero-btn{
         font-size: 1rem;
         padding: .5rem 1rem;
+    }
+
+    /* About */
+    .about-text-container {
+        margin: 3rem 2rem;
+    }
+
+    .about-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    /* About */
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-context {
+        font-size: 1rem;
     }
 }
