@@ -264,6 +264,7 @@ ul {
         position: absolute;
         inset: 4rem 0 auto;
         background-color: var(--primary-bg-color);
+        padding-bottom: 1rem;
     }
     
     .primary-nav[data-visible] {
@@ -273,8 +274,8 @@ ul {
     .nav-list {
         display: grid;
         justify-content: center;
-        gap: 1rem;
         text-align: center;
+        gap: 1rem;
     }
 
     .nav-buy {
