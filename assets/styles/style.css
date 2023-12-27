@@ -101,7 +101,7 @@ ul {
     border: none;
 }
 
-.nav-buy:visited, .nav-buy:active {
+.nav-buy:link, .nav-buy:visited, .nav-buy:active {
     color: var(--secondary-text-color);
 }
 
@@ -142,7 +142,7 @@ ul {
     border: none;
 }
 
-.hero-btn:visited, .hero-btn:active {
+.hero-btn:link, .hero-btn:visited, .hero-btn:active {
     color: var(--secondary-text-color);
 }
 
@@ -190,7 +190,7 @@ ul {
     margin: 0 10rem;
 }
 
-.news-card:visited, .community-card:visited  {
+.news-card:link, .news-card:visited, .community-card:link, .community-card:visited  {
     color: var(--primary-text-color);
 }
 
